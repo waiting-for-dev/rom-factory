@@ -35,7 +35,7 @@ module ROM
         @_factories = factories
         @_attributes = attributes.dup
         @_traits = {}
-        @_valid_names = _relation.schema.attributes.map(&:name)
+        @_valid_names = _relation.schema.attributes.map(&:key)
         yield(self)
       end
 
